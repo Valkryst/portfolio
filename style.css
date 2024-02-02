@@ -14,13 +14,15 @@ html {
 
         height: 100%;
 
-        margin: 0;
+        margin: 0 1rem;
 
         & > header {
             text-align: center;
 
             & > img {
-                max-width: 16rem;
+                display: none;
+
+                max-width: 70%;
                 border-radius: 50%;
             }
         }
@@ -30,28 +32,20 @@ html {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                row-gap: 3rem;
+                row-gap: 1rem;
 
-                max-width: 24rem;
-
-                margin: 3rem auto 0;
+                margin: 0 auto;
 
                 & > a {
                     & > button {
-                        display: grid;
-                        grid-column-gap: 2rem;
-                        grid-template-columns: 6rem auto;
-
-                        align-items: center;
-
                         cursor: pointer;
 
+                        height: 2rem;
                         width: 100%;
 
                         border-radius: 2rem;
 
-                        font-size: x-large;
-                        text-align: left;
+                        font-size: 0;
 
                         &:hover {
                             & > svg {
@@ -86,5 +80,96 @@ html {
     }
     50% {
         transform: scale(0.9);
+    }
+}
+
+@media only screen and (min-width: 260px) {
+    html {
+        & > body {
+            & > main {
+                & > #social-links {
+                    & > a {
+                        & > button {
+                            display: grid;
+                            grid-template-columns: 6rem auto;
+
+                            align-items: center;
+
+                            font-size: x-large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    html {
+        & > body {
+            & > header {
+                & > img {
+                    max-width: 16rem;
+                }
+            }
+
+            & > main {
+                & > #social-links {
+                    max-width: 24rem;
+
+                    & > a {
+                        font-size: x-large;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-height: 400px) {
+    html {
+        & > body {
+            & > main {
+                & > #social-links {
+                    & > a {
+                        & > button {
+                            height: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-height: 600px) {
+    html {
+        & > body {
+            & > header {
+                & > img {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-height: 700px) {
+    html {
+        & > body {
+            & > main {
+                & > #social-links {
+                    row-gap: 2rem;
+
+                    margin-top: 2rem;
+
+                    & > a {
+                        & > button {
+                            height: 4rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
