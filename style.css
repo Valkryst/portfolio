@@ -37,6 +37,9 @@ html {
                 margin: 0 auto;
 
                 & > a {
+                    color: var(--color-background);
+                    text-decoration: none;
+
                     & > button {
                         cursor: pointer;
 
