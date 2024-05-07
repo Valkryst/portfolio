@@ -67,14 +67,6 @@ html {
             }
         }
     }
-
-    a {
-        color: var(--color-link-unvisited);
-
-        &:visited {
-            color: var(--color-link-visited);
-        }
-    }
 }
 
 @keyframes svg-breath {
